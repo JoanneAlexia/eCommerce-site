@@ -1,0 +1,63 @@
+.Cocktail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: 5px solid #ffc871;
+  background-color: #ffc871;
+  color: #752091;
+  width: 250px;
+  margin: 20px;
+  padding-bottom: 45px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  &_name {
+    font-size: large;
+    margin-bottom: 0;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 260px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  &_hidden {
+    display: none;
+  }
+}
+
+.error p {
+  background-color: #c957bb;
+  color: #ffc871;
+  padding: 10px 0;
+  width: 100%;
+  height: auto;
+}
+
+.Link {
+  text-decoration: none;
+}
+
+.price {
+  margin: 5px;
+}
+
+.quantity {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  background-color: #c957bb;
+  padding: 10px;
+}
+
+.cartBtn {
+  position: absolute;
+  bottom: -15px;
+}

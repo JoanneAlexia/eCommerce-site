@@ -1,0 +1,32 @@
+.CartItem {
+  position: relative;
+  border: 2px solid #ffc871;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: #752091;
+}
+
+.details {
+  margin: 10px;
+}
+
+td {
+  padding: 10px 50px;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 200, 113);
+  color: rgb(255, 200, 113);
+  background-color: rgb(171, 54, 207);
+  font-size: 14px;
+  &_icon {
+    margin-right: 5px;
+  }
+}
