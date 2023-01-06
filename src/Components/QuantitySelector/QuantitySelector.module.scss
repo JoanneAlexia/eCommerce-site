@@ -1,0 +1,21 @@
+.QuantitySelector {
+  &_button {
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: #ffc871;
+    font-weight: bold;
+    font-size: 16px;
+    border: 3px solid #ffc871;
+    background-color: #ab36cf;
+  }
+  &_input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 3px solid #ffc871;
+    width: 15%;
+    margin: 0 10px;
+    background-color: rgb(255, 227, 177);
+    text-align: center;
+  }
+}

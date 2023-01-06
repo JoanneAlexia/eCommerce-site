@@ -1,0 +1,19 @@
+.packSize {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &_option {
+    flex: 1;
+    text-align: center;
+    background-color: #ab36cf;
+    padding: 5px;
+    color: #ffc871;
+    &_active {
+      background-color: #ffc871;
+      color: #ab36cf;
+    }
+  }
+  &_option p {
+    margin: 0;
+  }
+}

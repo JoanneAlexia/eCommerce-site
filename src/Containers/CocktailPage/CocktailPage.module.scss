@@ -1,0 +1,84 @@
+.CocktailPage {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(201, 87, 187, 0.5);
+}
+
+.OuterWrapper {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CocktailDetails {
+  background-color: #ffe3b1;
+  border-radius: 10px;
+  padding: 30px;
+  color: #752091;
+  width: 60vw;
+  &_header {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  &_middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &_btn {
+      margin-left: 10px;
+    }
+  }
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 10px;
+}
+.section2 {
+  overflow-y: scroll;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin-left: 30px;
+  padding-top: 40px;
+  &_description {
+    margin-bottom: 10px;
+  }
+  &_title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  &_subtitle {
+    margin: 0;
+  }
+}
+.cart {
+  margin-left: 10px;
+}
+
+.quantity {
+  background-color: #ab36cf;
+  text-align: center;
+  margin-top: 10px;
+  padding: 2px;
+}
+
+.recipe {
+  &_title {
+    align-self: left;
+  }
+}

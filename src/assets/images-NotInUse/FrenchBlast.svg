@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="169.359 75.26 169.664 157.47" width="169.664" height="157.47" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="253.872" y1="75.26" x2="253.872" y2="232.73" id="gradient-1">
+      <stop offset="0" style="stop-color: rgb(220, 113, 113);"/>
+      <stop offset="1" style="stop-color: rgb(201, 126, 156);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="254.191" y1="139.192" x2="254.191" y2="181.222" id="gradient-0">
+      <stop offset="0" style="stop-color: rgba(220, 113, 113, 1)"/>
+      <stop offset="1" style="stop-color: rgb(201, 126, 156);"/>
+    </linearGradient>
+  </defs>
+  <ellipse style="stroke-linejoin: round; stroke-width: 3px; fill: url(#gradient-1); stroke: rgb(236, 60, 139);" cx="253.872" cy="153.995" rx="77.084" ry="78.735"/>
+  <path style="stroke-width: 3px; fill: url(#gradient-0); stroke: rgb(213, 83, 141);" d="M 177.37 139.781 C 215.908 161.736 341.235 154.981 330.239 139.196 C 338.408 138.798 345.812 168.387 328.407 169.237 C 334.628 169.925 264.633 195.596 180.092 169.632 C 163.145 164.427 169.452 137.22 177.37 139.781 Z"/>
+</svg>

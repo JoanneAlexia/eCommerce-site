@@ -1,0 +1,11 @@
+.CartPage {
+  background-color: rgb(201, 87, 187, 0.5);
+  &_content {
+    padding: 20px;
+  }
+  &_header {
+    color: #ffc871;
+    font-size: 35px;
+    text-shadow: 2px 2px #752091;
+  }
+}
