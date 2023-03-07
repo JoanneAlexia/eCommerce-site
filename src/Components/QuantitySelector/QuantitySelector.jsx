@@ -2,7 +2,9 @@ import styles from "./QuantitySelector.module.scss";
 
 const QuantitySelector = ({ quantity, setQuantity }) => {
   const handleChange = (event) => {
-    setQuantity(event.target.value);
+    if (event.target.value >= 1) {
+      setQuantity(event.target.value);
+    }
   };
 
   const addQuantity = () => {
@@ -10,7 +12,7 @@ const QuantitySelector = ({ quantity, setQuantity }) => {
   };
 
   const minusQunatity = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };

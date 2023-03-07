@@ -1,12 +1,12 @@
 import styles from "./CartPage.module.scss";
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import { CartContext } from "../../context/CartContext";
 import Header from "../../Components/Header";
 import CocktailImg from "../../Components/CocktailImg";
 import CartItem from "../../Components/CartItem";
 
 const CartPage = () => {
-  const { cart } = useContext(AuthContext);
+  const { cart, modifiedCart, setCart } = useContext(CartContext);
   const [totalPrice, setPrice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
 
@@ -27,7 +27,7 @@ const CartPage = () => {
         <h2 className={styles.CartPage_header}>Cart</h2>
         <h3>{`Total: $${totalPrice}`}</h3>
         {cart.map((item) => {
-          return <CartItem item={item} />;
+          return <CartItem key={item.id} item={item} />;
         })}
       </div>
     </div>

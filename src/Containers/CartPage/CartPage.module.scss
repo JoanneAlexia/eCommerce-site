@@ -1,5 +1,7 @@
 .CartPage {
   background-color: rgb(201, 87, 187, 0.5);
+  min-height: 100vh;
+  height: 100%;
   &_content {
     padding: 20px;
   }

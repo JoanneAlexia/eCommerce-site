@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import { CocktailListContext } from "../../context/CocktailListContext";
 import Header from "../../Components/Header/Header";
 import AddToCartBtn from "../../Components/AddToCartBtn";
 import QuantitySelector from "../../Components/QuantitySelector";
@@ -11,7 +11,7 @@ import styles from "./CocktailPage.module.scss";
 
 const CocktailPage = () => {
   const { id } = useParams();
-  const { cocktailList } = useContext(AuthContext);
+  const { cocktailList } = useContext(CocktailListContext);
   const [cocktail, setCocktail] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [packSize, setPackSize] = useState(1);

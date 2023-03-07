@@ -4,7 +4,7 @@ import QuantitySelector from "../QuantitySelector";
 import CocktailImg from "../CocktailImg";
 import SizeSelector from "../SizeSelector";
 import Favourite from "../Favourite/Favourite";
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Cocktail = ({ cocktail }) => {

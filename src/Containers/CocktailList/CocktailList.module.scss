@@ -1,7 +1,33 @@
 .CocktailList {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #c957bb;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  margin-top: 80px;
+  &_Leftline {
+    width: 10vw;
+    margin-right: 20px;
+    color: rgb(255, 200, 113);
+    border: 1px solid rgb(255, 200, 113);
+  }
+  &_Rightline {
+    width: 10vw;
+    margin-left: 20px;
+    color: rgb(255, 200, 113);
+    border: 1px solid rgb(255, 200, 113);
+  }
+}
+.Cocktail {
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
   justify-content: center;
 }

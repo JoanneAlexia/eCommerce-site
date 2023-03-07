@@ -3,11 +3,11 @@ import CocktailImg from "../../Components/CocktailImg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { removeCocktailFromCart } from "../../services/cocktails";
-import { AuthContext } from "../../context/AuthContext";
+import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 
 const CartItem = ({ item }) => {
-  const { modfifiedCart, setModifiedCart } = useContext(AuthContext);
+  const { modfifiedCart, setModifiedCart } = useContext(CartContext);
   const removeBtnHandler = () => {
     removeCocktailFromCart(item.id);
     setModifiedCart(!modfifiedCart);

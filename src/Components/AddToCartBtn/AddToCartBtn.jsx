@@ -6,18 +6,15 @@ import {
   updateCart,
   updateCocktailList,
 } from "../../services/cocktails";
-import { AuthContext } from "../../context/AuthContext";
+import { CocktailListContext } from "../../context/CocktailListContext";
+import { CartContext } from "../../context/CartContext";
 import { useContext, useState } from "react";
+import CocktailList from "../../Containers/CocktailList/CocktailList";
 
 const AddToCartBtn = ({ cocktail, quantity, packSize }) => {
-  const {
-    cocktailList,
-    modifiedCocktailList,
-    setModifiedCocktailList,
-    modifiedCart,
-    setModifiedCart,
-    cart,
-  } = useContext(AuthContext);
+  const { cocktailList, setModifiedCocktailList } =
+    useContext(CocktailListContext);
+  const { cart, modifiedCart, setModifiedCart } = useContext(CartContext);
   const [btnText, setBtnText] = useState("Add to Cart");
   const [btnStyles, setBtnStyles] = useState([styles.AddToCartBtn]);
 
@@ -35,7 +32,7 @@ const AddToCartBtn = ({ cocktail, quantity, packSize }) => {
       setTimeout(() => {
         setBtnText("Add to Cart");
         setBtnStyles([styles.AddToCartBtn]);
-      }, 10000);
+      }, 2000);
       //Check if cart contains cocktail
       let addingCocktail = cart.find(
         (cartCocktail) => cartCocktail.id === cocktail.id

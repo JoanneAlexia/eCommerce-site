@@ -2,21 +2,17 @@ import bannerImg from "../../assets/images/header.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMartiniGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState, useContext, useEffect } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import { CocktailListContext } from "../../context/CocktailListContext";
 import styles from "./Banner.module.scss";
 
 const Banner = () => {
-  const { cocktailList } = useContext(AuthContext);
-  const randomCocktailSelector = () => {
-    const randomIndex = Math.floor(Math.random() * cocktailList.length);
-    return cocktailList[randomIndex];
-  };
+  const { cocktailList } = useContext(CocktailListContext);
 
   const [randomCocktail1, setRandomCocktail1] = useState(
-    randomCocktailSelector()
+    Math.floor(Math.random() * cocktailList.length)
   );
   const [randomCocktail2, setRandomCocktail2] = useState(
-    randomCocktailSelector()
+    Math.floor(Math.random() * cocktailList.length)
   );
 
   const [defaultBanner, setDefaultBanner] = useState(true);
@@ -29,7 +25,7 @@ const Banner = () => {
 
   const randomProductHandler = () => {
     if (showBanner2) {
-      setRandomCocktail2(randomCocktailSelector());
+      setRandomCocktail2(Math.floor(Math.random() * cocktailList.length));
       setBanner2Styles([
         styles.Banner,
         styles.banner2,
@@ -37,7 +33,7 @@ const Banner = () => {
       ]);
       setTimeout(() => setDefaultBanner(false), 3000);
     } else {
-      setRandomCocktail1(randomCocktailSelector());
+      setRandomCocktail1(Math.floor(Math.random() * cocktailList.length));
       setBanner2Styles([
         styles.Banner,
         styles.banner2,
@@ -49,29 +45,8 @@ const Banner = () => {
 
   return (
     <div>
-      {defaultBanner ? (
-        <div className={styles.Banner}>
-          <img className={styles.defaultImg} src={bannerImg}></img>
-        </div>
-      ) : (
-        <div className={styles.Banner}>
-          <div className={styles.cocktailInfo}>
-            <img
-              className={styles.cocktailInfo_img}
-              src={randomCocktail1.imgCocktail}
-            ></img>
-            <h2>{randomCocktail1.name}</h2>
-          </div>
-        </div>
-      )}
-      <div className={banner2Styles.join(" ")}>
-        <div className={styles.cocktailInfo}>
-          <img
-            className={styles.cocktailInfo_img}
-            src={randomCocktail2.imgCocktail}
-          ></img>
-          <h2>{randomCocktail2.name}</h2>
-        </div>
+      <div className={styles.Banner}>
+        <img className={styles.defaultImg} src={bannerImg}></img>
       </div>
       <div className={styles.productDesc}>
         <p>
